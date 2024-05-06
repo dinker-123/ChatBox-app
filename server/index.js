@@ -13,7 +13,8 @@ app.use(cors());
 const io = socketIO(server, {
   cors: {
     origin: "https://chat-box-frontend-three.vercel.app",
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST"],
+    credentials:true
   }
 });
 app.get("/",(req,res)=>{
