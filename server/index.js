@@ -10,7 +10,7 @@ const server = http.createServer(app);
 app.use(cors());
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:8000",
+    origin: "https://chat-box-frontend-three.vercel.app/",
     methods: ["GET", "POST"]
   }
 });
