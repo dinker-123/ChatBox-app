@@ -3,7 +3,6 @@ import socketIO from 'socket.io-client';
 
 const socket = socketIO.connect('https://chat-box-api-seven.vercel.app');
 const ItemContext = createContext();
-localStorage.debug = '*';
 function useValue() {
   return useContext(ItemContext);
 }
