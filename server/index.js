@@ -8,12 +8,17 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors());
+
+
 const io = socketIO(server, {
   cors: {
     origin: "https://chat-box-frontend-three.vercel.app",
     methods: ["GET", "POST"]
   }
 });
+app.get("/",(req,res)=>{
+  res.json("Hello");
+})
 
 io.on('connection', (socket) => {
   console.log(`User connected: ${socket.id}`);
