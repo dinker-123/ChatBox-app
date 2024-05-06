@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import socketIO from 'socket.io-client';
 
-const socket = socketIO.connect('http://localhost:3000');
+const socket = socketIO.connect('https://chat-box-api-seven.vercel.app/');
 const ItemContext = createContext();
 
 function useValue() {
