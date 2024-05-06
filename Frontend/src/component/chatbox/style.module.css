@@ -1,0 +1,169 @@
+:root {
+    --bar-width: 250px;
+    --show-bar: 0; 
+}
+
+
+.chatboxContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237,241,245);
+    margin: 0;
+    width: calc(100% - (var(--bar-width) * var(--show-bar)));
+    height: 100vh; 
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: width 0.3s ease;
+}
+
+ 
+
+.chatTop{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right:2%;
+    border-bottom:1px solid rgb(0, 0, 0);
+    justify-content: space-between;
+}
+
+b{
+    color: rgb(97, 95, 95);
+}
+
+.member{
+    font-weight: 300;
+    padding: 1%;
+}
+
+.inputChat {
+    position: relative;
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1%;
+    height: 75vh;
+    padding-bottom: 0%;
+    margin-bottom: 0.5%;
+  }
+
+.chatContainer{
+    display:inline-block;
+    height: 75vh;
+    max-width:80%;
+    min-width: 10%;
+}
+
+.messageText {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    min-width: 10%;
+    background-color: white;
+    margin: 0.5em 0; 
+    margin-left: 1em;
+    padding: 0.5em; 
+    border-radius: 0px 18px 18px 18px; 
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+    word-wrap: break-word; 
+    overflow: hidden;
+    transition: background-color 0.3s ease; 
+}
+
+/* Additional styles for messages from the current user */
+.messageBoxRight .messageText {
+    background-color: #d1eaff;
+    border-radius: 18px 0px 18px 18px; 
+}
+
+/* Hover effect for message bubbles */
+.messageText:hover {
+    background-color: #e8e8e8; 
+}
+
+
+p {
+    word-wrap: break-word; 
+    margin: 1%;
+    margin-left: 2%;
+}
+
+.sendIcon{
+    border: none;
+    padding-left: 0%;
+    padding-right: 49px; 
+    font-size: 1.5rem; 
+}
+
+.img {
+    width: 50px;
+    height: auto; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+.headLineChatBox {
+    display: flex;
+    align-items: center; 
+    justify-content: start; 
+    gap: 9px; 
+}
+
+
+.chatBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width to utilize available space */
+    height: 900vh; /* Auto height for flexibility */
+    overflow-y: auto; /* Scrollable content */
+    padding: 1em; /* Padding around the messages */
+}
+
+
+.inputField{
+    width: 100%; 
+    padding: 1%;
+    background-color: rgb(237,241,245);
+    border: 2px solid rgb(121, 121, 125);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+
+.likeButton{
+    border: none;
+    margin-top: 0;
+    font-size: small;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: red;
+    cursor: pointer;
+}
+
+.emojiInputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 94%;
+    height: 1vh;
+  }
+  
+  .emojiPicker {
+    position: absolute;
+    bottom: 0%; /* Position it above the input field */
+    right: 0;
+    z-index: 800;
+    transform: translatey(-200px); /* Adjust this value to align it as needed */
+  }
+  
+  
+  .faFaceSmile {
+    position: absolute;
+    left: 0.5em;
+    z-index: 100;
+  }

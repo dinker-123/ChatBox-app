@@ -1,0 +1,84 @@
+/* Base container */
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 200%;
+    font-size: 1.1em;
+    height: 100vh;
+    background-color: #f9f9f9; /* Light background for the chat container */
+    border-right: 1px solid #e0e0e0; /* Separator line */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .chatContainer {
+      width: 250%; /* Full width on smaller screens */
+      font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* User name section */
+  .userName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px; /* Padding around the user name */
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+  }
+  
+  /* Avatar image */
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Ensure the image fits well */
+  }
+  
+  /* Conversation header */
+  .conversationHeader {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+  }
+  
+  /* Conversation list */
+  .conversation {
+    flex-grow: 1; /* Take up remaining space */
+    overflow-y: auto; /* Scrollable list */
+  }
+  
+  /* Individual location/user item */
+  .location {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  /* Highlight location on hover */
+  .location:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Active location/user item */
+  .activeLocation {
+    background-color: #d8eaff; /* Highlight for the active user */
+    font-weight: bold;
+  }
+  
+  /* Icon in the location/user item */
+  .icon {
+    margin-right: 10px;
+    color: #606060;
+  }
+  
+  /* Responsive design for conversation list */
+  @media (max-width: 768px) {
+    .conversation {
+      max-height: 50vh;
+    }
+  }
+  
